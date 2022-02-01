@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Lesson2</string>
+    <string name="send">Отправить</string>
+    <string name="aw">Введите сообщение</string>
+    <string name="odw">Таймер</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="pause">Pause</string>
+    <string name="_0_00_00">0:00:00</string>
+
+</resources>

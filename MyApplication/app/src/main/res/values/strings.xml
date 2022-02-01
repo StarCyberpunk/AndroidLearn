@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="HelloWorld">Привет мир!</string>
+    <string name="buttonColor">Определить цвет</string>
+    <string name="textviewColor">TextView</string>
+    <string-array name="colorsColor">
+        <item>Красный</item>
+        <item>Ораньжевый</item>
+        <item>Желтый</item>
+        <item>Зеленый</item>
+        <item>Голубой</item>
+    </string-array>
+    <string-array name="descriptionTempColor">
+        <item>dgrdgrdgrdgrdgrdgrdgrdgrdgrdgrdgrdgrdgrdgrdgr</item>
+        <item>yjjjjjjjjjjjjjjj</item>
+        <item>vnnnnnnnnnnnnnn</item>
+        <item>ntrrrrrrrrrrrrrrr</item>
+        <item>vgnfnfyjtfyjrtjrtjrt</item>
+    </string-array>
+</resources>
