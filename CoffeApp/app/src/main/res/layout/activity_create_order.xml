@@ -4,6 +4,148 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateOrderActivity">
+    tools:context=".CreateOrderActivity"
+    android:background="@color/coffe">
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/textViewHiUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30sp"
+        android:text="@string/HiChoise"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="35dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/textViewHiUser">
+
+        <RadioButton
+            android:id="@+id/radioButTea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+
+            android:text="@string/ChaiRadio"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/radioButCoffe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+
+            android:text="@string/CoffeeRadio"></RadioButton>
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/textViewTakeSpiner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ChoiseDopView"
+        android:layout_margin="8px"
+        android:textColor="@color/white"
+
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+    <CheckBox
+        android:id="@+id/checkBoxMilk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@string/DopMilkCheck"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTakeSpiner" />
+
+    <CheckBox
+        android:id="@+id/checkBoxLimon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8px"
+        android:text="@string/DopLimonCheck"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxSahar"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxMilk"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTakeSpiner" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSahar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="@string/DopCaharCheck"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTakeSpiner" />
+
+    <TextView
+        android:id="@+id/textView3ChoiceDrink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8px"
+        android:text="@string/ChoiceVidView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxLimon" />
+
+    <Spinner
+        android:id="@+id/spinnerTea"
+        android:layout_width="375dp"
+        android:layout_height="27dp"
+        android:entries="@array/Options_tea"
+
+        android:textColor="@color/white"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3ChoiceDrink" />
+
+    <Spinner
+        android:id="@+id/spinnerCoffee"
+        android:layout_width="373dp"
+        android:layout_height="24dp"
+        android:layout_margin="8px"
+        android:entries="@array/Options_coffe"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3ChoiceDrink" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="231dp"
+        android:layout_height="122dp"
+        android:layout_margin="8px"
+        android:onClick="choisedOrder"
+        android:text="@string/ButChoice"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTea" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

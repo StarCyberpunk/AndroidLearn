@@ -6,4 +6,23 @@
     <string name="ButtonEnterLogin">Войти</string>
     <string name="inputPassd">Введите пароль</string>
     <string name="ErrorEmty">Все поля должны быть заполнены</string>
+    <string name="HiChoise">Привет клиент,что будете заказывать?</string>
+    <string name="ChaiRadio">Чай</string>
+    <string name="CoffeeRadio">Кофе</string>
+    <string name="ChoiseDopView">Что добавить в ваш чай?</string>
+    <string name="DopMilkCheck">Молоко</string>
+    <string name="DopLimonCheck">Лимон</string>
+    <string name="DopCaharCheck">Сахар</string>
+    <string name="ChoiceVidView">Выберите вид напитка</string>
+    <string name="ButChoice">Сделать заказ</string>
+    <string-array name="Options_coffe">
+       <item>Американо</item>
+        <item>Эспрессо</item>
+        <item>Латте</item>
+    </string-array>
+    <string-array name="Options_tea">
+        <item>Черный</item>
+        <item>Зеленый</item>
+        <item>Красный</item>
+    </string-array>
 </resources>
