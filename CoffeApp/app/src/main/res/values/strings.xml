@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CoffeApp</string>
+    <string name="ForPhoto">Логотип кафе</string>
+    <string name="DobroTextView">Добро пожаловать!</string>
+    <string name="nameInput">Введите логин</string>
+    <string name="ButtonEnterLogin">Войти</string>
+    <string name="inputPassd">Введите пароль</string>
+    <string name="ErrorEmty">Все поля должны быть заполнены</string>
+</resources>

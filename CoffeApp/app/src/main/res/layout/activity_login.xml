@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/coffe">
+
+
+    <ImageView
+        android:id="@+id/imageCoffe"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:contentDescription="@string/ForPhoto"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/DobroPozh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:text="@string/DobroTextView" />
+
+    <EditText
+        android:id="@+id/LoginTExt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/nameInput"
+android:textColor="@color/white"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/PasswordText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:hint="@string/inputPassd"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:onClick="goToOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ButtonEnterLogin"
+        />
+</LinearLayout>
