@@ -15,9 +15,10 @@ import android.widget.TextView;
 public class CreateOrderActivity extends AppCompatActivity {
     private String Name;
     private String Password;
+    private String WantMore;
+    private StringBuilder bulder;
     private TextView welcome;
-    private RadioButton tea;
-    private RadioButton coffe;
+
     private TextView Dopoptc;
     private CheckBox Sahar;
     private CheckBox Milk;
@@ -30,13 +31,17 @@ public class CreateOrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_order);
         Intent intent=getIntent();
-        Name=intent.getStringExtra("name");
-        Password=intent.getStringExtra("password");
-
+        if(intent.hasExtra("name")&&intent.hasExtra("password")) {
+            Name = intent.getStringExtra("name");
+            Password = intent.getStringExtra("password");
+        }
+        else {
+            Name="def";Password="def";
+        }
          welcome=findViewById(R.id.textViewHiUser);
-
-         tea=findViewById(R.id.radioButTea);
-         coffe=findViewById(R.id.radioButCoffe);
+        WantMore=String.format("чай");
+         /*tea=findViewById(R.id.radioButTea);
+         coffe=findViewById(R.id.radioButCoffe);*/
          Dopoptc=findViewById(R.id.textViewTakeSpiner);
          Sahar=findViewById(R.id.checkBoxSahar);
          Milk=findViewById(R.id.checkBoxMilk);
@@ -44,9 +49,10 @@ public class CreateOrderActivity extends AppCompatActivity {
          Coffespin=findViewById(R.id.spinnerCoffee);
          Teaspin=findViewById(R.id.spinnerTea);
 
-        welcome.setText("Привет "+Name+",что будете заказывать?");
+        welcome.setText(String.format(getString(R.string.HelloClas),Name));
+        bulder=new StringBuilder();
 
-         if(tea.isChecked()){
+         /*if(tea.isChecked()){
              Dopoptc.setText("Что добавить в ваш чай?");
 
 
@@ -54,14 +60,59 @@ public class CreateOrderActivity extends AppCompatActivity {
          else if(coffe.isChecked()){
              Dopoptc.setText("Что добавить в ваш кофе?");
 
-         }
+         }*/
 
 
         }
 
     public void choisedOrder(View view) {
-        if (Milk.isChecked()){}
-        if (Limon.isChecked()){}
-        if (Sahar.isChecked()){}
+        bulder.setLength(0);
+        if(Milk.isChecked()){
+            bulder.append("Молоко").append(" ");
+        }
+        if(Limon.isChecked()){
+            bulder.append("Лимон").append(" ");
+        }
+        if(Sahar.isChecked()&&WantMore.equals(getString(R.string.ChaiRadio))){
+            bulder.append("Сахар").append(" ");
+        }
+        String optionsDrink="";
+         if(WantMore.equals("чай")){
+             optionsDrink=Teaspin.getSelectedItem().toString();
+         }
+         else if(WantMore.equals("кофе")){
+             optionsDrink=Coffespin.getSelectedItem().toString();
+         }
+        String order=String.format(getString(R.string.Order),Name,Password,WantMore,optionsDrink);
+         String additions;
+         if(bulder.length()>0){
+             additions="Добавки:"+bulder.toString();
+
+         }else {
+             additions="";
+         }
+         String fullorder=order+additions;
+         Intent intent = new Intent(this,OrderActivity.class);
+         intent.putExtra("order",fullorder);
+         startActivity(intent);
+    }
+
+    public void onClickChange(View view) {
+        RadioButton button=(RadioButton) view;
+        int id=button.getId();
+        if(id==R.id.radioButTea){
+            Dopoptc.setText(String.format("Что добавить в ваш %s ?",WantMore));
+            Coffespin.setVisibility(View.INVISIBLE);
+            Teaspin.setVisibility(View.VISIBLE);
+            Limon.setVisibility(View.VISIBLE);
+        }
+        else if(id==R.id.radioButCoffe) {
+            WantMore="кофе";
+            Dopoptc.setText(String.format("Что добавить в ваш %s ?",WantMore));
+            Teaspin.setVisibility(View.INVISIBLE);
+            Coffespin.setVisibility(View.VISIBLE);
+            Limon.setVisibility(View.INVISIBLE);
+
+        }
     }
 }
