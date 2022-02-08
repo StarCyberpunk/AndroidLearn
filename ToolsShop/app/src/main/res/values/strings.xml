@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ToolsShop</string>
+    <string name="LogoMain">Логоитип компании</string>
+    <string name="driallogo">Фото дрели</string>
+    <string-array name="Katolog">
+        <item>Дрели</item>
+        <item>Перфораторы</item>
+        <item>Болгарки</item>
+
+    </string-array>
+    <string name="interskolo">Дрель Интерскол</string>
+    <string name="makita">Дрель Макита</string>
+    <string name="dewalt">Дрель Деволт</string>
+
+    <string name="interskolo_info">adwdwdwdwdwdw</string>
+    <string name="makita_info">rgdergdrgd</string>
+    <string name="dewalt_info">fbgfbfbfgbgfgb</string>
+    <string name="TitelInter">Дрель</string>
+    <string name="InfoInter">TextView</string>
+</resources>
