@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TryGuess">
+
+    <ImageView
+        android:id="@+id/imageViewGuess"
+        android:layout_width="350dp"
+        android:layout_height="384dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/alert_light_frame" />
+
+    <Button
+        android:id="@+id/buttonFirst"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/firstbut"
+        android:onClick="Answer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewGuess" />
+
+    <Button
+        android:id="@+id/buttonSecond"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/secondfirst"
+        android:onClick="Answer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFirst" />
+
+    <Button
+        android:id="@+id/buttonThird"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/thirdbut"
+        android:onClick="Answer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSecond" />
+
+    <Button
+        android:id="@+id/buttonFourth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/fourdbut"
+        android:onClick="Answer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonThird" />
+</androidx.constraintlayout.widget.ConstraintLayout>

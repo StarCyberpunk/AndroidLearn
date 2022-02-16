@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DownloadFromWeb</string>
+    <string name="downloadimage">DownloadImage</string>
+    <string name="firstbut">1</string>
+    <string name="secondfirst">2</string>
+    <string name="thirdbut">3</string>
+    <string name="fourdbut">4</string>
+</resources>
