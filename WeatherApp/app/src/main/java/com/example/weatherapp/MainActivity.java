@@ -30,7 +30,7 @@ private String jsonSite="https://api.openweathermap.org/data/2.5/weather?q=Kazan
     private Button b3;
     private String choise="https://api.openweathermap.org/data/2.5/weather?q=Kazan&appid=05639f0c5f270c379a6246ba7ba25515";
     private TextView textView;
-
+    //https://openweathermap.org/current
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
