@@ -22,13 +22,13 @@ import java.net.URL;
 import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity {
-private String jsonSite="https://api.openweathermap.org/data/2.5/weather?q=Kazan&appid=05639f0c5f270c379a6246ba7ba25515";
-    private String jsonSite2="https://api.openweathermap.org/data/2.5/weather?q=Moscow&appid=05639f0c5f270c379a6246ba7ba25515";
-    private String jsonSite3="https://api.openweathermap.org/data/2.5/weather?q=London&appid=05639f0c5f270c379a6246ba7ba25515";
+private String jsonSite="https://api.openweathermap.org/data/2.5/weather?q=Kazan&appid={}";
+    private String jsonSite2="https://api.openweathermap.org/data/2.5/weather?q=Moscow&appid={}";
+    private String jsonSite3="https://api.openweathermap.org/data/2.5/weather?q=London&appid={}";
     private Button b1;
     private Button b2;
     private Button b3;
-    private String choise="https://api.openweathermap.org/data/2.5/weather?q=Kazan&appid=05639f0c5f270c379a6246ba7ba25515";
+    private String choise="https://api.openweathermap.org/data/2.5/weather?q=Kazan&appid={}";
     private TextView textView;
     //https://openweathermap.org/current
     @Override
